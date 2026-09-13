@@ -510,10 +510,15 @@ section {
     text-decoration: none;
 }
 
-.board-card img{
-    width:100%;
-    aspect-ratio: 1/1;
-    background: var(--bg-brand-secondary);
+.board-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    background-image: url('/assets/board-card-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     object-fit: cover;
 }
 
