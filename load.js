@@ -74,6 +74,44 @@ document.addEventListener("DOMContentLoaded", () => {
   // เริ่มต้นที่ Slide แรก
   updateSlide();
 
+  // ================= LOAD POLICY =================
+  async function loadPolicies() {
+    try {
+      const res = await fetch('policy.json');
+      const data = await res.json();
+
+      const grid = document.getElementById('policyGrid');
+      if (!grid) return;
+
+      data.forEach((policy) => {
+        const item = document.createElement('div');
+        item.className = 'accordion-item';
+
+        item.innerHTML = `
+          <div class="accordion-header">
+            <h3>${policy.title}</h3>
+            <span class="icon"><i class="bi bi-plus"></i></span>
+          </div>
+          <div class="accordion-content">
+            <p>${policy.description}</p>
+          </div>
+        `;
+
+        const header = item.querySelector('.accordion-header');
+        header.onclick = () => {
+          item.classList.toggle('active');
+        };
+
+        grid.appendChild(item);
+      });
+
+    } catch (err) {
+      console.error("โหลด policy ไม่ได้:", err);
+    }
+  }
+
+  loadPolicies();
+
   // ================= LOAD HEADER/FOOTER =================
 
   const components = {
@@ -477,5 +515,59 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
   }
+
+  const policyCards = document.querySelectorAll('.policy-card');
+
+const policyModal = document.getElementById('policyModal');
+const policyModalClose = document.getElementById('policyModalClose');
+const policyModalBackdrop = document.querySelector('.policy-modal-backdrop');
+
+const modalTitle = document.getElementById('modalTitle');
+const modalDescription = document.getElementById('modalDescription');
+
+
+function openPolicyModal(card) {
+
+    const title = card.dataset.title;
+    const description = card.dataset.description;
+
+    modalTitle.textContent = title;
+    modalDescription.textContent = description;
+
+    policyModal.classList.add('active');
+
+    document.body.style.overflow = 'hidden';
+}
+
+
+function closePolicyModal() {
+
+    policyModal.classList.remove('active');
+
+    document.body.style.overflow = '';
+}
+
+
+policyCards.forEach(card => {
+
+    card.addEventListener('click', () => {
+        openPolicyModal(card);
+    });
+
+});
+
+
+policyModalClose.addEventListener('click', closePolicyModal);
+
+policyModalBackdrop.addEventListener('click', closePolicyModal);
+
+
+document.addEventListener('keydown', (event) => {
+
+    if (event.key === 'Escape') {
+        closePolicyModal();
+    }
+
+});
 
 });
