@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อ | พรรคประชาราษฎร์</title>
+    
+    <meta property="og:title" content="ติดต่อพรรคประชาราษฎร์">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pracharatparty.vercel.app/">
+    <meta property="og:image" content="https://pracharatparty.vercel.app/assets/thumbnail.png">
+    <meta property="og:site_name" content="พรรคประชาราษฎร์">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ติดต่อพรรคประชาราษฎร์">
+    <meta name="twitter:image" content="https://pracharatparty.vercel.app/assets/thumbnail.png">
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+    <script src="/load.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+
+        <main>
+        <section class="contact">
+
+            <div class="contact-grid">
+
+                <!-- Form -->
+                <div class="contact-form">
+
+                    <h2>ส่งข้อความถึงเรา</h2>
+
+                    <div id="successMessage" class="contact-message success">
+                        <i class="bi bi-check-circle-fill"></i>
+                        ส่งข้อความเรียบร้อยแล้ว
+                    </div>
+
+                    <div id="errorMessage" class="contact-message error">
+                        <i class="bi bi-exclamation-circle-fill"></i>
+                        ไม่สามารถส่งข้อความได้ กรุณาลองใหม่อีกครั้ง
+                    </div>
+
+                    <form id="contactForm">
+
+                        <div class="contact-row">
+
+                            <div class="contact-field">
+                                <label for="name">ชื่อ <span>*</span></label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    placeholder="ชื่อของคุณ"
+                                    required>
+                            </div>
+
+                            <div class="contact-field">
+                                <label for="discord">Discord <span>*</span></label>
+
+                                <input
+                                    type="text"
+                                    id="discord"
+                                    placeholder="ชื่อผู้ใช้ของคุณ"
+                                    required>
+                            </div>
+
+                        </div>
+
+                        <div class="contact-field">
+                            <label for="subject">หัวข้อ <span>*</span></label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                placeholder="หัวข้อที่ต้องการติดต่อ"
+                                required>
+                        </div>
+
+                        <div class="contact-field">
+                            <label for="message">ข้อความ <span>*</span></label>
+
+                            <textarea
+                                id="message"
+                                placeholder="เขียนข้อความของคุณ..."
+                                required></textarea>
+                        </div>
+
+                        <button
+                            type="submit"
+                            id="submitButton">
+
+                            <i class="bi bi-send-fill"></i>
+                            ส่งข้อความ
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+
+                <!-- Contact Info -->
+                <div class="contact-info-box">
+
+                    <h2>ข้อมูลการติดต่อ</h2>
+
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+
+                        <div>
+                            <h3>สำนักงานใหญ่</h3>
+
+                            <p>
+                                120 ถนนวิภาวดีรังสิต แขวงจอมพล<br>
+                                เขตจตุจักร กรุงเทพมหานคร
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-instagram"></i>
+                        </div>
+
+                        <div>
+                            <h3>Instagram</h3>
+
+                            <a href="https://www.instagram.com/pracharatparty" target="_blank">
+                                @pracharatparty
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="contact-info-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-facebook"></i>
+                        </div>
+
+                        <div>
+                            <h3>Facebook</h3>
+
+                            <a href="https://www.facebook.com/pracharatparty" target="_blank">
+                                พรรคประชาราษฎร์ - Pracharat Party
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <div id="footer"></div>
+    
+</body>
+</html>

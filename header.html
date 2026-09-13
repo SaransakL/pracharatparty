@@ -1,0 +1,59 @@
+<header>
+    <a class="logo" href="/">
+        <img src="/assets/logo.png">
+    </a>
+    <nav>
+        <a href="/">หน้าแรก</a>
+        <a href="/policy.html">นโยบาย</a>
+        <a href="/mp.html">ส.ส. พรรค</a>
+
+        <div class="dropdown">
+            <a class="dropdown-toggle">
+                เกี่ยวกับพรรค
+            </a>
+
+            <div class="dropdown-menu">
+                <a href="/history.html">ประวัติความเป็นมา</a>
+                <a href="/ideology.html">อุดมการณ์ของพรรค</a>
+                <a href="/board.html">ผู้บริหารพรรค</a>
+            </div>
+        </div>
+
+        <a href="/contact.html">ติดต่อ</a>
+    </nav>
+    <div class="menu-btn bi bi-list" onclick="toggleMenu()"></div>
+
+    <div class="offcanvas" id="offcanvas">
+
+        <!-- หน้าหลัก -->
+        <div class="offcanvas-page main-page">
+
+            <div class="close-btn bi bi-x-lg" onclick="toggleMenu()"></div>
+        
+            <a href="/">หน้าแรก</a>
+            <a href="/policy.html">นโยบาย</a>
+            <a href="/mp.html">ส.ส. พรรค</a>
+
+            <a onclick="openSubmenu(event, 'about')">
+                เกี่ยวกับพรรค
+            </a>
+
+            <a href="/contact.html">ติดต่อ</a>
+
+        </div>
+
+        <div class="offcanvas-page submenu-page" id="about">
+
+            <div class="back-btn" onclick="closeSubmenu()">
+                <i class="bi bi-arrow-left"></i>
+            </div>
+
+            <a href="/history.html">ประวัติความเป็นมา</a>
+            <a href="/ideology.html">อุดมการณ์ของพรรค</a>
+            <a href="/board.html">ผู้บริหารพรรค</a>
+
+        </div>
+
+    </div>
+    
+</header>
